@@ -1,0 +1,24 @@
+.header {
+font-size: 24px;
+}
+
+.navbar {
+    display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 12vh;
+}
+
+.menu ul {
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    list-style-type: none;
+    gap: 24px;
+    color: gray;
+    cursor: pointer;
+}
+
+.menu ul li:active {
+    color: orangered;
+  }
