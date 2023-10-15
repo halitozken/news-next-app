@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./header.module.css";
 import Image from "next/image";
 import logo from "../../assets/images/logo.svg";
@@ -8,15 +7,16 @@ const Header = () => {
     <header className={styles.header}>
       <nav className={styles.navbar}>
         <div className={styles.logo}>
-          <Image src={logo} alt="" />
+          {/* <Image src={logo} alt="" /> */}
+          Bi' News
         </div>
         <div className={styles.menu}>
           <ul>
-            <li>Home</li>
-            <li>New</li>
-            <li>Popular</li>
-            <li>Trending</li>
-            <li>Categories</li>
+            <li>Ansayfa</li>
+            <li>Son Haberler</li>
+            <li>Ekonomi</li>
+            <li>Spor</li>
+            <li>Teknoloji</li>
           </ul>
         </div>
       </nav>
