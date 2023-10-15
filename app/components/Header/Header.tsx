@@ -1,6 +1,4 @@
 import styles from "./header.module.css";
-import Image from "next/image";
-import logo from "../../assets/images/logo.svg";
 
 const Header = () => {
   return (

@@ -10,8 +10,8 @@ const Content = ({ firstNews, otherNews }) => {
   return (
     <section className={styles.container}>
       {
-        firstNews.map((e, i) => (
-          <>
+        firstNews.map((e) => (
+          <div key={e.key}>
             <section className={styles.featuredNews}>
               <div className={styles.featuredImage}>
                 <Image
@@ -32,19 +32,19 @@ const Content = ({ firstNews, otherNews }) => {
                 </div>
               </div>
             </section>
-          </>
+          </div>
         ))[0]
       }
 
       <section className={styles.newsArea}>
         <h2>Latest</h2>
         {otherNews.map((e) => (
-          <>
+          <div key={e.key}>
             <div className={styles.newsItem}>
               <h3>{e.name}</h3>
               <p>{e.description}</p>
             </div>
-          </>
+          </div>
         ))}
       </section>
     </section>
