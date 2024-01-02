@@ -1,9 +1,6 @@
 "use client";
-
 import Image from "next/image";
-import web from "../../assets/images/image-web-3-desktop.jpg";
 import styles from "./content.module.css";
-import axios from "axios";
 import Link from "next/link";
 
 const Content = ({ firstNews, otherNews }) => {
@@ -15,15 +12,16 @@ const Content = ({ firstNews, otherNews }) => {
             <section className={styles.featuredNews}>
               <div className={styles.featuredImage}>
                 <Image
-                  src={e.image}
-                  width={850}
+                  src={e.urlToImage}
+                  className={styles.image}
+                  width={100}
                   style={{ maxWidth: "100%" }}
-                  height={450}
+                  height={100}
                   alt=""
                 />
               </div>
               <div className={styles.featuredContent}>
-                <h1>{e.name}</h1>
+                <h1>{e.title}</h1>
                 <div className={styles.featuredText}>
                   <p>{e.description}</p>
                   <Link href={e.url} target="_blank">
@@ -39,11 +37,16 @@ const Content = ({ firstNews, otherNews }) => {
       <section className={styles.newsArea}>
         <h2>Latest</h2>
         {otherNews.map((e) => (
-          <div key={e.key}>
-            <div className={styles.newsItem}>
-              <h3>{e.name}</h3>
-              <p>{e.description}</p>
-            </div>
+          <div key={e.content}>
+            <Link
+              href={e.url}
+              target="_blank"
+              style={{ textDecoration: "none" }}
+            >
+              <div className={styles.newsItem}>
+                <h3>{e.title}</h3>
+              </div>
+            </Link>
           </div>
         ))}
       </section>

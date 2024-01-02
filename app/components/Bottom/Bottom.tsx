@@ -8,7 +8,13 @@ const Bottom = ({ news }) => {
       {news.map((e) => (
         <div key={e.key}>
           <div className={styles.card}>
-            <Image src={e.image} alt="" width={150} height={175} />
+            <Image
+              src={e.image}
+              alt=""
+              className={styles.image}
+              width={100}
+              height={100}
+            />
             <div className={styles.cardContent}>
               <div className={styles.cardTitle}>{e.name}</div>
             </div>
