@@ -25,7 +25,7 @@ const Content = ({ firstNews, otherNews }) => {
                 <div className={styles.featuredText}>
                   <p>{e.description}</p>
                   <Link href={e.url} target="_blank">
-                    <button>HABERE GİT</button>
+                    <button>READ MORE</button>
                   </Link>
                 </div>
               </div>

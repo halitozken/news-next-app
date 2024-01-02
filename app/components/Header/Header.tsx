@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import styles from "./header.module.css";
 
@@ -7,19 +8,19 @@ const Header = () => {
       <nav className={styles.navbar}>
         <div className={styles.logo}>
           {/* <Image src={logo} alt="" /> */}
-          Bi' News
+          Bi News
         </div>
         <div className={styles.menu}>
           <ul>
             <li>
-              <Link href="/">Anasayfa</Link>
+              <Link href="/">Home</Link>
             </li>
             <li>
-              <Link href="/latest">Son Haberler</Link>
+              <Link href="/latest">Latest News</Link>
             </li>
-            <li>Ekonomi</li>
-            <li>Spor</li>
-            <li>Teknoloji</li>
+            <li>Economy</li>
+            <li>Sports</li>
+            <li>Technology</li>
           </ul>
         </div>
       </nav>

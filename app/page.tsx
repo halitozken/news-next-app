@@ -32,7 +32,7 @@ export default function Home() {
       <Header />
       <Featured firstNews={firstNews} otherNews={otherNews} />
       <Bottom news={bottomNews} />
-      <Footer />
+      {/* <Footer /> */}
     </main>
   );
 }

@@ -9,14 +9,14 @@ const Bottom = ({ news }) => {
         <div key={e.key}>
           <div className={styles.card}>
             <Image
-              src={e.image}
+              src={e.urlToImage}
               alt=""
               className={styles.image}
               width={100}
               height={100}
             />
             <div className={styles.cardContent}>
-              <div className={styles.cardTitle}>{e.name}</div>
+              <div className={styles.cardTitle}>{e.title}</div>
             </div>
           </div>
         </div>
