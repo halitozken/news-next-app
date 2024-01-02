@@ -8,8 +8,8 @@ import Header from "../components/Header/Header";
 const Business = () => {
   const [article, setArticle] = useState<any[]>([]);
   const firstNews = article[0];
-  const bottomNews = article.slice(1, 5);
-  const bottomOtherNews = article.slice(6, 10);
+  const bottomNews = article?.slice(1, 5);
+  const bottomOtherNews = article?.slice(6, 10);
 
   useEffect(() => {
     const fetchNews = async () => {

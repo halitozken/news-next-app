@@ -5,14 +5,14 @@ import Bottom from "./components/Bottom/Bottom";
 import Content from "./components/Content/Content";
 import styles from "./page.module.css";
 import { useEffect, useState } from "react";
-import Footer from "./components/Footer/Footer";
+
 
 export default function Home() {
   const [article, setArticle] = useState<any[]>([]);
   const firstNews = article[0];
-  const otherNews = article.slice(1, 5);
-  const bottomNews = article.slice(6, 10);
-  const bottomOtherNews = article.slice(11, 15);
+  const otherNews = article?.slice(1, 5);
+  const bottomNews = article?.slice(6, 10);
+  const bottomOtherNews = article?.slice(11, 15);
 
   useEffect(() => {
     const fetchNews = async () => {
