@@ -13,10 +13,15 @@ const Technology = () => {
 
   useEffect(() => {
     const fetchNews = async () => {
+      const apikey = "5b0d4be5a4c2fbcc2fffbe32b7ff29bf";
+      const category = "technology";
+      const url =
+        "https://gnews.io/api/v4/top-headlines?category=" +
+        category +
+        "&lang=en&country=us&max=10&apikey=" +
+        apikey;
       try {
-        const response = await fetch(
-          "https://newsapi.org/v2/top-headlines?country=us&category=technology&apiKey=30d0fd65ad664fe18688a23a1553c980"
-        );
+        const response = await fetch(url);
         const data = await response.json();
 
         setArticle(data.articles);
@@ -36,7 +41,7 @@ const Technology = () => {
           <section className={styles.featuredNews}>
             <div className={styles.featuredImage}>
               <img
-                src={firstNews.urlToImage}
+                src={firstNews.image}
                 className={styles.image}
                 width={100}
                 style={{ maxWidth: "100%" }}
@@ -67,7 +72,7 @@ const Technology = () => {
               target="_blank"
               style={{ textDecoration: "none", color: "inherit" }}
             >
-              <img src={e.urlToImage} alt="" width={150} height={150} />
+              <img src={e.image} alt="" width={150} height={150} />
               <div className={styles.cardContent}>
                 <div className={styles.cardTitle}>{e.title}</div>
               </div>
@@ -83,7 +88,7 @@ const Technology = () => {
               target="_blank"
               style={{ textDecoration: "none", color: "inherit" }}
             >
-              <img src={e.urlToImage} alt="" width={150} height={150} />
+              <img src={e.image} alt="" width={150} height={150} />
               <div className={styles.cardContent}>
                 <div className={styles.cardTitle}>{e.title}</div>
               </div>

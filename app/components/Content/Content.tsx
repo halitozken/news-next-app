@@ -13,7 +13,7 @@ const Content = ({ firstNews, otherNews }) => {
           <section className={styles.featuredNews}>
             <div className={styles.featuredImage}>
               <Image
-                src={firstNews.urlToImage}
+                src={firstNews.image}
                 className={styles.image}
                 width={100}
                 style={{ maxWidth: "100%" }}
